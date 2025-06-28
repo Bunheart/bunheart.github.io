@@ -1,0 +1,99 @@
+:root
+{
+    --text: #040316;
+    --background: #fbfbfe;
+    --primary: #ffa5fa;
+    --secondary: #f37fe7;
+    --accent: #ffccfc;
+}
+
+#darkmode
+{
+    --text: #eae9fc;
+    --background: #010104;
+    --primary: #832d7e;
+    --secondary: #67085d;
+    --accent: #661a7f;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+header
+{
+    background-color: var(--background);
+    width: 100vw;
+    text-align: center;
+    padding: 1em;
+    border-bottom: 1px solid var(--text);
+
+}
+
+.headerContainer
+{
+    height: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headerTitle{
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 4em 0 1em;
+    width: 30%;
+    line-height: 100%;
+    display: inline;
+    vertical-align: middle;
+    font-style: italic;
+    padding: 1em;
+    
+}
+
+.navigationOptions
+{
+    
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    
+}
+
+.navigationOptions a
+{
+    line-height: 60%;
+    vertical-align: middle;
+    color: var(--text);
+    margin: 0 4em 0 4em;
+    padding: 10%;
+    text-decoration: none;
+    align-items: right;
+    background-color: var(--accent);
+    border-radius: 20%;
+}
+
+.navigationOptions a:hover
+{
+    color: var(--text);
+    background-color: var(--secondary);
+    opacity: 80%;
+    transition: background-color 0.5s;
+}
+
+
+.contents
+{
+    padding: 2em;
+}
+
+.contents h2
+{
+    color: var(--primary);
+}
