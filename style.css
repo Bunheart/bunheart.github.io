@@ -97,3 +97,68 @@ header
 {
     color: var(--primary);
 }
+
+/* Project Cards */
+
+.projectCard
+{
+    width: 20%;
+    border-radius: 5%;
+    background-color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
+}
+
+.projectCard img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.projectCard h3
+{
+    padding: 0em 1em;
+}
+
+.projectCard p
+{
+    padding: 0em 1em;
+}
+
+/* Project Cards - Buttons */
+
+.projectButtons
+{
+    padding: 0em 1em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+.projectButtons a
+{
+    width: 20%;
+    text-decoration: none;
+    color: var(--background);
+    padding: 1em;
+    text-align: center;
+}
+
+.repoButton
+{
+    background-color: var(--primary);
+}
+
+.webButton
+{
+    margin-left: auto;
+    background-color: var(--primary);
+}
+
+.projectButtons a:hover
+{
+    filter: brightness(85%);
+    transition: 0.5s;
+}

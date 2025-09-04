@@ -1,0 +1,10 @@
+[
+    {
+        "name": "PMD Quiz",
+        "desc": "A JavaScript powered recreation of the personality quiz at the beginning of Pokemon Mystery Dungeon games.",
+        "descLong": "Temp",
+        "headerImg": "pmdquiz.png",
+        "repoURL": "pmd-quiz",
+        "webPage": true
+    }
+]
