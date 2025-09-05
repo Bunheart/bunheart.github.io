@@ -1,19 +1,20 @@
 :root
 {
-    --text: #040316;
-    --background: #fbfbfe;
-    --primary: #ffa5fa;
-    --secondary: #f37fe7;
-    --accent: #ffccfc;
+    --text: #14080c;
+    --background: #fdfafc;
+    --primary: #cf487b;
+    --secondary: #e68bae;
+    --accent: #e3548b;
+    --unchanging-white: #fdfafc;
 }
 
-#darkmode
+.darkMode
 {
-    --text: #eae9fc;
-    --background: #010104;
-    --primary: #832d7e;
-    --secondary: #67085d;
-    --accent: #661a7f;
+    --text: #f8edf0;
+    --background: #242223;
+    --primary: #b53063;
+    --secondary: #76193d;
+    --accent: #ab1c53;
 }
 
 body
@@ -21,72 +22,81 @@ body
     font-family: Arial, sans-serif;
     background-color: var(--background);
     color: var(--text);
+    margin: 0;
 }
+
+/* Header */
 
 header
 {
-    background-color: var(--background);
-    width: 100vw;
+    background-color: var(--secondary);
+    width: 100%;
     text-align: center;
     padding: 1em;
     border-bottom: 1px solid var(--text);
-
-}
-
-.headerContainer
-{
-    height: 100%;
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .headerTitle{
-    background: linear-gradient(to right, var(--primary), var(--accent));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0 4em 0 1em;
+    color: var(--unchanging-white);
+    margin: auto auto auto 2em;
     width: 30%;
     line-height: 100%;
     display: inline;
-    vertical-align: middle;
     font-style: italic;
-    padding: 1em;
-    
+    text-align: left;
 }
 
 .navigationOptions
 {
-    
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    width: 70%;
-    
+    margin: auto;
+    height: 100%;
+    width: 40%;
+}
+
+.navigationOptions li
+{
+    margin: auto;
 }
 
 .navigationOptions a
 {
-    line-height: 60%;
-    vertical-align: middle;
     color: var(--text);
-    margin: 0 4em 0 4em;
-    padding: 10%;
+    padding: 1em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
     text-decoration: none;
-    align-items: right;
-    background-color: var(--accent);
+    background-color: var(--background);
     border-radius: 20%;
 }
 
 .navigationOptions a:hover
 {
     color: var(--text);
-    background-color: var(--secondary);
+    filter: brightness(-10%);
     opacity: 80%;
-    transition: background-color 0.5s;
+    transition: 0.5s;
 }
 
+/* Header - Dark Mode Button */
+
+#themeButton
+{
+    width: 30%;
+    background-color: transparent;
+    font-size: 1em;
+    color: var(--text);
+    font-size: 3em;
+    margin: auto 4rem auto auto;
+    border-style: none;
+    text-align: right;
+}
+
+/* Main Content */
 
 .contents
 {
@@ -95,7 +105,7 @@ header
 
 .contents h2
 {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 /* Project Cards */
@@ -104,16 +114,19 @@ header
 {
     width: 20%;
     border-radius: 5%;
-    background-color: var(--accent);
+    background-color: var(--background);
     display: flex;
     flex-direction: column;
     padding-bottom: 2em;
     overflow: hidden;
+    border-style: solid;
+    border-color: var(--text);
+    border-width: 0.1em;
 }
 
 .projectCard:hover
 {
-    filter:drop-shadow(0 0 0.5em black);
+    filter:drop-shadow(0 0 0.5em var(--text));
     transition: 0.5s;
 }
 
@@ -126,7 +139,10 @@ header
 
 .projectCard h3
 {
-    padding: 0em 1em;
+    padding: 1em;
+    background-color: var(--primary);
+    color: var(--unchanging-white);
+    margin: 0;
 }
 
 .projectCard p
@@ -148,20 +164,20 @@ header
 {
     width: 20%;
     text-decoration: none;
-    color: var(--background);
+    color: var(--unchanging-white);
     padding: 1em;
     text-align: center;
 }
 
 .repoButton
 {
-    background-color: var(--primary);
+    background-color: var(--accent);
 }
 
 .webButton
 {
     margin-left: auto;
-    background-color: var(--primary);
+    background-color: var(--accent);
 }
 
 .projectButtons a:hover
